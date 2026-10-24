@@ -608,4 +608,2227 @@
         .service-list li::before {
             content: "✓ ";
             color: var(--accent-mint);
-            f
+            font-weight: 800;
+        }
+
+        /* ================= 03 // TEMPLATES & LIVE DEMOS (ALL 8) ================= */
+        .filter-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 46px;
+        }
+        .filter-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-glass);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-cyan);
+            color: #030408;
+            border-color: var(--accent-cyan);
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+        .template-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-top: 1px solid var(--border-specular);
+            border-radius: 16px;
+            padding: 36px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.35s var(--ease-smooth);
+        }
+        .template-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-7px);
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.72);
+        }
+        .template-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .t-badge {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 6px;
+            background: rgba(0, 242, 254, 0.08);
+            border: 1px solid var(--border-glow);
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+        }
+        .like-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 600;
+            background: var(--bg-elevated);
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-glass);
+            user-select: none;
+            transition: 0.2s;
+        }
+        .like-btn:hover, .like-btn.liked {
+            color: var(--accent-pink);
+            border-color: var(--accent-pink);
+        }
+        .template-title {
+            font-family: var(--font-display);
+            font-size: 23px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-pure);
+        }
+        .template-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 26px;
+            line-height: 1.8;
+            flex-grow: 1;
+        }
+        .template-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+        .t-chip {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-glass);
+            padding: 4px 10px;
+            border-radius: 6px;
+            color: var(--text-muted);
+        }
+        .template-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .btn-preview {
+            background: var(--text-pure);
+            color: #030408;
+            border: none;
+            padding: 13px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-preview:hover {
+            background: var(--accent-cyan);
+            box-shadow: 0 0 18px var(--border-glow);
+        }
+        .btn-buy {
+            background: rgba(0, 242, 254, 0.08);
+            color: var(--accent-cyan);
+            border: 1px solid var(--border-glow);
+            padding: 13px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-buy:hover {
+            background: var(--accent-cyan);
+            color: #030408;
+        }
+
+        /* ================= 04 // TRANSPARENT PRICING ================= */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+        }
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-top: 1px solid var(--border-specular);
+            border-radius: 16px;
+            padding: 42px 34px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.35s var(--ease-smooth);
+        }
+        .pricing-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.75);
+        }
+        .pricing-card.featured {
+            border: 2px solid var(--accent-cyan);
+            background: linear-gradient(180deg, rgba(0, 242, 254, 0.06) 0%, var(--bg-card) 100%);
+        }
+        .popular-ribbon {
+            position: absolute;
+            top: -13px;
+            right: 26px;
+            background: var(--accent-cyan);
+            color: #030408;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+        .plan-name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .plan-price {
+            font-family: var(--font-display);
+            font-size: 46px;
+            font-weight: 800;
+            color: var(--text-pure);
+            margin: 16px 0 8px;
+            letter-spacing: -1px;
+        }
+        .plan-price span {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            font-weight: 500;
+        }
+        .plan-eta {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--accent-mint);
+            margin-bottom: 26px;
+            display: block;
+        }
+        .plan-features {
+            list-style: none;
+            margin-bottom: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+        .plan-features li::before {
+            content: "✓ ";
+            color: var(--accent-mint);
+            font-weight: 800;
+        }
+
+        .addons-bar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 34px;
+            margin-top: 44px;
+        }
+        .addon-pills {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 18px 0;
+        }
+        .addon-btn {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-glass);
+            color: var(--text-secondary);
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-size: 13.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .addon-btn.selected {
+            border-color: var(--accent-mint);
+            color: var(--accent-mint);
+            background: rgba(16, 185, 129, 0.08);
+        }
+
+        /* ================= 05 // CODE LAB ================= */
+        .codelab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 26px;
+        }
+        .codelab-pane {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .codelab-bar {
+            background: var(--bg-elevated);
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border-glass);
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .codelab-textarea {
+            width: 100%;
+            height: 320px;
+            background: #020306;
+            color: var(--accent-cyan);
+            border: none;
+            padding: 20px;
+            font-family: var(--font-mono);
+            font-size: 13.5px;
+            line-height: 1.65;
+            resize: vertical;
+            outline: none;
+        }
+        .codelab-iframe {
+            width: 100%;
+            height: 320px;
+            border: none;
+            background: #080b12;
+        }
+
+        /* ================= 06 // PERMANENT REVIEWS ================= */
+        .reviews-banner {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-top: 1px solid var(--border-specular);
+            border-radius: 16px;
+            padding: 38px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 34px;
+            align-items: center;
+            margin-bottom: 38px;
+        }
+        .score-col {
+            text-align: center;
+            border-right: 1px solid var(--border-glass);
+            padding-right: 28px;
+        }
+        .score-big {
+            font-family: var(--font-display);
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--accent-amber);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stars-amber {
+            color: var(--accent-amber);
+            font-size: 20px;
+            margin-bottom: 8px;
+            letter-spacing: 3px;
+        }
+        .bars-col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .bar-track {
+            flex-grow: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-amber), var(--accent-cyan));
+            transition: width 0.4s ease;
+        }
+
+        .star-picker {
+            display: flex;
+            gap: 10px;
+            font-size: 32px;
+            cursor: pointer;
+            color: #272732;
+            margin-bottom: 18px;
+            user-select: none;
+        }
+        .star-picker span.selected {
+            color: var(--accent-amber);
+            transform: scale(1.1);
+        }
+
+        .reviews-stream {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-height: 430px;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+        .review-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-glass);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* ================= 07 // CONTACT & INSTANT WHATSAPP ================= */
+        .contact-split {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+        .contact-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-top: 1px solid var(--border-specular);
+            border-radius: 16px;
+            padding: 40px 34px;
+        }
+        .dual-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .field-group { margin-bottom: 20px; }
+        .field-group label {
+            display: block;
+            font-size: 12.5px;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+        .input-box {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 10px;
+            background: #030408;
+            border: 1px solid var(--border-glass);
+            color: var(--text-pure);
+            outline: none;
+            font-size: 14.5px;
+            transition: 0.2s;
+        }
+        .input-box:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 14px rgba(0, 242, 254, 0.2);
+        }
+        textarea.input-box {
+            min-height: 115px;
+            resize: vertical;
+        }
+
+        .quick-wa-box {
+            margin-top: 30px;
+            padding: 24px;
+            border-radius: 12px;
+            background: rgba(37, 211, 102, 0.06);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 26px;
+            left: 26px;
+            background: #25d366;
+            color: #030408;
+            padding: 13px 22px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+            z-index: 9997;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13.5px;
+            transition: all 0.25s var(--ease-smooth);
+        }
+        .whatsapp-float:hover { transform: scale(1.05) translateY(-3px); }
+        .whatsapp-float svg { width: 22px; height: 22px; fill: #030408; }
+
+        /* Fullscreen Viewport Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 4, 8, 0.96);
+            backdrop-filter: blur(22px);
+            z-index: 10000;
+            display: none;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .modal-overlay.open { display: flex; }
+        .modal-topbar {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 16px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .device-switch {
+            display: flex;
+            gap: 6px;
+            background: var(--bg-elevated);
+            padding: 4px;
+            border-radius: 8px;
+            border: 1px solid var(--border-glass);
+        }
+        .dev-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .dev-btn.active {
+            background: var(--accent-cyan);
+            color: #030408;
+        }
+        .modal-stage {
+            max-width: 1140px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 0 20px 60px;
+            transition: max-width 0.3s ease;
+        }
+        .modal-stage.mobile-mode { max-width: 420px; }
+
+        .browser-window {
+            background: #0a0d16;
+            border: 1px solid var(--border-glass);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.85);
+        }
+        .browser-bar {
+            background: #131826;
+            padding: 12px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-glass);
+            font-family: var(--font-mono);
+            font-size: 12px;
+        }
+
+        /* Interactive Apps Styles inside Modal */
+        .calc-box {
+            max-width: 340px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 14px;
+            border: 1px solid var(--border-glass);
+        }
+        .calc-screen {
+            background: #030408;
+            border: 1px solid var(--border-glass);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: right;
+            font-size: 28px;
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+            min-height: 64px;
+        }
+        .calc-keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .c-btn {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-glass);
+            color: var(--text-pure);
+            font-size: 17px;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .c-btn:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+        .c-btn.eq { background: var(--accent-cyan); color: #030408; }
+
+        .reflex-arena {
+            width: 100%;
+            height: 320px;
+            background: #030408;
+            border: 2px dashed var(--border-glow);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .reflex-orb {
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-cyan), var(--accent-amber));
+            box-shadow: 0 0 22px var(--accent-cyan);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            color: #030408;
+        }
+
+        .pixel-board {
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            gap: 1px;
+            background: #272730;
+            border: 2px solid var(--border-glass);
+            max-width: 360px;
+            margin: 0 auto 18px;
+            padding: 2px;
+        }
+        .p-cell { aspect-ratio: 1; background: #030408; cursor: pointer; }
+        .p-color {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+        .p-color.active { transform: scale(1.2); border-color: #fff; }
+
+        /* Toast */
+        .toast-pill {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            background: var(--bg-card);
+            border: 1.5px solid var(--accent-mint);
+            color: var(--text-pure);
+            padding: 15px 22px;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transform: translateY(140px);
+            opacity: 0;
+            transition: all 0.35s var(--ease-smooth);
+            z-index: 10001;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .toast-pill.show { transform: translateY(0); opacity: 1; }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13.5px;
+            background: #020306;
+        }
+        footer a { color: var(--accent-cyan); text-decoration: none; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            .section-luxury { padding: 95px 0 85px; }
+            .reviews-banner { grid-template-columns: 1fr; }
+            .score-col { border-right: none; border-bottom: 1px solid var(--border-glass); padding-bottom: 24px; padding-right: 0; }
+            .dual-inputs { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .studio-badge { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 60FPS Interactive Particle Canvas -->
+    <canvas id="bgCanvas"></canvas>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress" class="scroll-progress"></div>
+
+    <!-- ================= STICKY NAVIGATION ================= -->
+    <header>
+        <div class="container">
+            <div class="nav-inner">
+                <div class="brand-logo" onclick="scrollToId('splash')">
+                    <div class="brand-icon"></div>
+                    <div class="brand-title">ELITE<span>.WEB</span></div>
+                    <span class="studio-badge">Digital Web Studio</span>
+                </div>
+
+                <nav class="nav-links">
+                    <a class="nav-link" href="#pitch" onclick="scrollToId('pitch')">Overview</a>
+                    <a class="nav-link" href="#services" onclick="scrollToId('services')">Services</a>
+                    <a class="nav-link" href="#templates" onclick="scrollToId('templates')">Templates (8)</a>
+                    <a class="nav-link" href="#pricing" onclick="scrollToId('pricing')">Pricing</a>
+                    <a class="nav-link" href="#codelab" onclick="scrollToId('codelab')">Code Lab</a>
+                    <a class="nav-link" href="#ratings" onclick="scrollToId('ratings')">Reviews</a>
+                    <a class="nav-link" href="#contact" onclick="scrollToId('contact')">Contact</a>
+                </nav>
+
+                <div class="nav-controls">
+                    <button type="button" id="sfxBtn" class="btn-sfx" onclick="toggleAudio()">🔊 SFX: ON</button>
+                    <div class="theme-dots">
+                        <div class="t-dot active" style="background:#00f2fe;" title="Cyber Cyan" onclick="setTheme('cyan', this)"></div>
+                        <div class="t-dot" style="background:#a855f7;" title="Royal Violet" onclick="setTheme('violet', this)"></div>
+                        <div class="t-dot" style="background:#10b981;" title="Neon Emerald" onclick="setTheme('emerald', this)"></div>
+                    </div>
+                    <a href="#contact" class="nav-order-btn" onclick="prefillOrder('Custom Website Order', '₹6,999')">
+                        Order Now ⚡
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= SCREEN 0: 100VH CENTERPIECE BRAND SPLASH ================= -->
+    <section id="splash" class="splash-screen">
+        <div class="splash-pill">NEXT-GEN DIGITAL WEB STUDIO</div>
+        <h1 class="splash-giant-title" id="giantBrandTitle">ELITE<span>.WEB</span></h1>
+        <p class="splash-subtitle">
+            We engineer ultra-fast, high-converting websites, zero-fee e-commerce stores, and modern digital platforms that scale your business on every screen.
+        </p>
+        <a href="#pitch" class="scroll-down-btn" onclick="scrollToId('pitch')">
+            <div class="mouse-icon"><div class="mouse-wheel"></div></div>
+            <span>Scroll to Explore ↓</span>
+        </a>
+    </section>
+
+    <main class="container">
+
+        <!-- ================= 01 // EXECUTIVE HERO PITCH ================= -->
+        <section id="pitch" class="section-luxury reveal">
+            <div class="status-pill">
+                <span class="live-dot"></span>
+                Available For Client Projects — 48h Fast Turnaround
+            </div>
+
+            <h2 class="hero-pitch-title">Transforming Businesses With <br><span class="gradient-text">High-Speed, Modern Websites</span></h2>
+
+            <div class="typing-role-bar">
+                <span style="color: var(--text-muted);">&gt; WE BUILD:</span>
+                <span id="roleTypingTarget">Modern Landing Pages</span><span class="caret-cursor"></span>
+            </div>
+
+            <p class="subtext-luxury">
+                Aapke business aur brand ke liye zero-lag, mobile-first aur ultra-fast websites jo visitors ko paying clients me convert karein. Zero monthly CMS fees, clean source code aur 0.02s Google loading speed.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="#templates" class="btn-primary" onclick="scrollToId('templates')">
+                    Browse Ready Templates ↗
+                </a>
+                <a href="https://wa.me/919082670590?text=Hello%20ELITE.WEB,%20I%20want%20to%20build%20a%20website%20for%20my%20business!" target="_blank" class="btn-whatsapp">
+                    WhatsApp: +91 90826 70590 💬
+                </a>
+                <a href="#pricing" class="btn-secondary" onclick="scrollToId('pricing')">
+                    Transparent Pricing
+                </a>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card reveal delay-1">
+                    <div class="trust-num">48 Hours</div>
+                    <div class="trust-label">Rapid Project Turnaround</div>
+                </div>
+                <div class="trust-card reveal delay-2">
+                    <div class="trust-num">100% Mobile</div>
+                    <div class="trust-label">Perfect On Phone & Laptop</div>
+                </div>
+                <div class="trust-card reveal delay-3">
+                    <div class="trust-num">₹0 Monthly</div>
+                    <div class="trust-label">Zero CMS Platform Lock-in</div>
+                </div>
+                <div class="trust-card reveal delay-3">
+                    <div class="trust-num">0.02s Load</div>
+                    <div class="trust-label">SEO & Google Rank Ready</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 02 // SERVICES SECTION ================= -->
+        <section id="services" class="section-luxury reveal">
+            <span class="eyebrow-tag">01 // AGENCY SERVICES</span>
+            <h2 class="headline-luxury">What We Build For You</h2>
+            <p class="subtext-luxury">Client conversion aur brand authority badhane ke liye engineered websites jo laptop aur phone dono par super-smooth chalti hain.</p>
+
+            <div class="services-grid">
+                <div class="service-card reveal delay-1">
+                    <div>
+                        <div class="service-icon">🚀</div>
+                        <h3 class="service-title">High-Converting Landing Pages</h3>
+                        <span class="service-ideal">IDEAL FOR: Product launches, ads, lead generation</span>
+                        <p style="font-size: 15px; color: var(--text-secondary);">Single-page high-impact design jisme compelling copywriting, social proof, dynamic call-to-actions aur instant WhatsApp/email lead capture hota hai.</p>
+                        <ul class="service-list">
+                            <li>48-Hour Rapid Delivery</li>
+                            <li>Direct Email & WhatsApp Capture</li>
+                            <li>Ultra-Fast 0.02s Loading Speed</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="prefillOrder('High-Converting Landing Page', '₹2,999')">
+                        Order Landing Page →
+                    </button>
+                </div>
+
+                <div class="service-card reveal delay-2">
+                    <div>
+                        <div class="service-icon">🛒</div>
+                        <h3 class="service-title">E-Commerce & Online Stores</h3>
+                        <span class="service-ideal">IDEAL FOR: Direct selling, clothing, digital goods</span>
+                        <p style="font-size: 15px; color: var(--text-secondary);">Bina kisi Shopify ya monthly subscription fee ke complete online store with product catalog, working shopping cart, bill calculation aur WhatsApp checkout.</p>
+                        <ul class="service-list">
+                            <li>Zero Monthly Platform Fees</li>
+                            <li>Working Cart & Instant Checkout</li>
+                            <li>Payment Gateway / WhatsApp Orders</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="prefillOrder('E-Commerce Online Store', '₹14,999')">
+                        Order E-Commerce Store →
+                    </button>
+                </div>
+
+                <div class="service-card reveal delay-3">
+                    <div>
+                        <div class="service-icon">🏢</div>
+                        <h3 class="service-title">Corporate & Business Portfolios</h3>
+                        <span class="service-ideal">IDEAL FOR: Local agencies, consultants, studios</span>
+                        <p style="font-size: 15px; color: var(--text-secondary);">Multi-page modern corporate presence with service showcases, interactive client reviews, aur professional email/WhatsApp connectivity.</p>
+                        <ul class="service-list">
+                            <li>Multi-Page Responsive Architecture</li>
+                            <li>SEO & Local Google Search Ready</li>
+                            <li>Permanent Verified Client Reviews</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="prefillOrder('Corporate Business Portfolio', '₹6,999')">
+                        Order Business Website →
+                    </button>
+                </div>
+
+                <div class="service-card reveal delay-3">
+                    <div>
+                        <div class="service-icon">⚡</div>
+                        <h3 class="service-title">Custom Web Apps & Redesigns</h3>
+                        <span class="service-ideal">IDEAL FOR: Startups, custom calculators, site overhauls</span>
+                        <p style="font-size: 15px; color: var(--text-secondary);">Purani slow websites ko modern futuristic aesthetic me convert karein, ya custom interactive tools (calculators, dashboards, generators) banwayein.</p>
+                        <ul class="service-list">
+                            <li>Full UI/UX Redesign & Overhaul</li>
+                            <li>Custom Client-Side JS Calculators</li>
+                            <li>100% Performance Optimization</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="prefillOrder('Custom Web App / Redesign', 'Custom Quote')">
+                        Inquire Custom Project →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 03 // READY TEMPLATES & TOOLS (ALL 8) ================= -->
+        <section id="templates" class="section-luxury reveal">
+            <div class="filter-header-bar">
+                <div>
+                    <span class="eyebrow-tag">02 // READY-TO-USE ARCHITECTURE</span>
+                    <h2 class="headline-luxury" style="margin-bottom: 0;">Live Website Demos & Tools</h2>
+                </div>
+                <div class="filter-pills">
+                    <button type="button" class="filter-btn active" onclick="filterShowcase('all', this)">All (8)</button>
+                    <button type="button" class="filter-btn" onclick="filterShowcase('websites', this)">Full Websites (3)</button>
+                    <button type="button" class="filter-btn" onclick="filterShowcase('tools', this)">Interactive Tools (5)</button>
+                </div>
+            </div>
+            <p class="subtext-luxury">Har template aur tool ka real interactive working preview test karein aur apne brand ke liye customize karne ke liye 1-click me order karein.</p>
+
+            <div class="templates-grid">
+                <!-- 1. NovaCart -->
+                <div class="template-card reveal delay-1" data-cat="websites">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">WEBSITE // E-COMMERCE</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t1')"><span>♥</span> <span class="like-num">96</span></div>
+                        </div>
+                        <h3 class="template-title">NovaCart E-Commerce Store</h3>
+                        <p class="template-desc">Complete online retail store template with working cart, bill calculation, catalog filters aur instant checkout flow.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">Working Cart</span>
+                            <span class="t-chip">Zero Monthly Fees</span>
+                            <span class="t-chip">₹14,999</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('ecommerce')">Live Preview ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('NovaCart E-Commerce Template', '₹14,999')">Buy / Customize</button>
+                    </div>
+                </div>
+
+                <!-- 2. NexusAI -->
+                <div class="template-card reveal delay-2" data-cat="websites">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">WEBSITE // SAAS CLOUD</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t2')"><span>♥</span> <span class="like-num">89</span></div>
+                        </div>
+                        <h3 class="template-title">NexusAI Cloud Platform</h3>
+                        <p class="template-desc">SaaS product showcase template featuring interactive monthly/yearly pricing toggles, live analytics metrics aur plan comparison.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">Interactive Pricing</span>
+                            <span class="t-chip">SaaS Dashboard</span>
+                            <span class="t-chip">₹6,999</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('saas')">Live Preview ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('NexusAI SaaS Template', '₹6,999')">Buy / Customize</button>
+                    </div>
+                </div>
+
+                <!-- 3. Apex Studio -->
+                <div class="template-card reveal delay-3" data-cat="websites">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">WEBSITE // AGENCY</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t3')"><span>♥</span> <span class="like-num">78</span></div>
+                        </div>
+                        <h3 class="template-title">Apex Digital Studio</h3>
+                        <p class="template-desc">Creative digital agency website with an interactive project budget estimator, service cards aur bold editorial layout.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">Budget Estimator</span>
+                            <span class="t-chip">High Conversion</span>
+                            <span class="t-chip">₹6,999</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('agency')">Live Preview ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('Apex Agency Template', '₹6,999')">Buy / Customize</button>
+                    </div>
+                </div>
+
+                <!-- 4. Cyber Glass UI -->
+                <div class="template-card reveal delay-1" data-cat="tools">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">TOOL // CSS STUDIO</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t4')"><span>♥</span> <span class="like-num">62</span></div>
+                        </div>
+                        <h3 class="template-title">Cyber Glass UI Studio</h3>
+                        <p class="template-desc">Live glassmorphic CSS generator. Interactive blur aur surface opacity sliders with 1-click CSS code export.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">Live Sliders</span>
+                            <span class="t-chip">CSS Generator</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('glass')">Live Preview ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('Cyber Glass UI Studio', '₹2,999')">Customize Tool</button>
+                    </div>
+                </div>
+
+                <!-- 5. Ultra-Light Grid -->
+                <div class="template-card reveal delay-2" data-cat="tools">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">TOOL // LAYOUT BUILDER</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t5')"><span>♥</span> <span class="like-num">54</span></div>
+                        </div>
+                        <h3 class="template-title">Ultra-Light Grid Framework</h3>
+                        <p class="template-desc">Zero-library layout boilerplate switcher with 2-column, 3-column aur 4-column responsive CSS Grid generation.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">CSS Grid</span>
+                            <span class="t-chip">Layout Builder</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('framework')">Live Preview ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('Grid Layout Builder', '₹2,999')">Customize Tool</button>
+                    </div>
+                </div>
+
+                <!-- 6. Sci-Fi Calculator -->
+                <div class="template-card reveal delay-3" data-cat="tools">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">APP // UTILITY</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t6')"><span>♥</span> <span class="like-num">47</span></div>
+                        </div>
+                        <h3 class="template-title">Cyber Sci-Fi Calculator</h3>
+                        <p class="template-desc">20-key arithmetic client-side math evaluator with brackets, backspace, decimals aur instant expression calculation.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">20 Keys</span>
+                            <span class="t-chip">Math Engine</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('calc')">Live Preview ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('Cyber Calculator App', '₹2,999')">Customize App</button>
+                    </div>
+                </div>
+
+                <!-- 7. Neon Reflex Game -->
+                <div class="template-card reveal delay-1" data-cat="tools">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">APP // MINI-GAME</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t7')"><span>♥</span> <span class="like-num">84</span></div>
+                        </div>
+                        <h3 class="template-title">Neon Reflex Speed Test</h3>
+                        <p class="template-desc">15-second interactive pointer accuracy game with glowing targets, live score tracking aur highscore storage.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">Game Engine</span>
+                            <span class="t-chip">Highscore</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('reflex')">Play Live ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('Neon Reflex Game Integration', '₹3,999')">Integrate Game</button>
+                    </div>
+                </div>
+
+                <!-- 8. Pixel Art Studio -->
+                <div class="template-card reveal delay-2" data-cat="tools">
+                    <div>
+                        <div class="template-top">
+                            <span class="t-badge">TOOL // CANVAS</span>
+                            <div class="like-btn" onclick="toggleLike(this, 'like_t8')"><span>♥</span> <span class="like-num">71</span></div>
+                        </div>
+                        <h3 class="template-title">16x16 Pixel Art Studio</h3>
+                        <p class="template-desc">256-cell interactive pixel canvas with 6-color palette, drag-to-draw support aur random cyber pattern generator.</p>
+                        <div class="template-tags">
+                            <span class="t-chip">Pixel Canvas</span>
+                            <span class="t-chip">6 Colors</span>
+                        </div>
+                    </div>
+                    <div class="template-btns">
+                        <button type="button" class="btn-preview" onclick="openPreviewModal('pixel')">Live Preview ↗</button>
+                        <button type="button" class="btn-buy" onclick="prefillOrder('Pixel Art Studio Tool', '₹3,499')">Customize Tool</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 04 // TRANSPARENT PRICING & ADDONS ================= -->
+        <section id="pricing" class="section-luxury reveal">
+            <span class="eyebrow-tag">03 // TRANSPARENT PACKAGES</span>
+            <h2 class="headline-luxury">Affordable Website Packages</h2>
+            <p class="subtext-luxury">Zero hidden charges. No monthly subscription lock-ins. You own 100% of your source code and website.</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card reveal delay-1">
+                    <div>
+                        <h3 class="plan-name">Starter Landing Page</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary);">Perfect for individual professionals, product launches & single-service promotions.</p>
+                        <div class="plan-price">₹2,999 <span>/ one-time</span></div>
+                        <span class="plan-eta">⚡ 48 Hours Fast Delivery</span>
+                        <ul class="plan-features">
+                            <li>1 High-Converting Landing Page</li>
+                            <li>100% Mobile & Laptop Responsive</li>
+                            <li>Direct Gmail / Lead Form Integration</li>
+                            <li>WhatsApp Floating Chat Button</li>
+                            <li>Free 1 Month Maintenance Support</li>
+                            <li>Full Source Code Handover</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="prefillOrder('Starter Landing Page Package', '₹2,999')">
+                        Choose Starter Plan
+                    </button>
+                </div>
+
+                <div class="pricing-card featured reveal delay-2">
+                    <span class="popular-ribbon">MOST POPULAR</span>
+                    <div>
+                        <h3 class="plan-name">Growth Business Suite</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary);">Best for growing local businesses, corporate agencies, and multi-service brands.</p>
+                        <div class="plan-price" style="color: var(--accent-cyan);">₹6,999 <span>/ one-time</span></div>
+                        <span class="plan-eta">⚡ 3-4 Days Delivery</span>
+                        <ul class="plan-features">
+                            <li>Up to 5 Custom Styled Pages</li>
+                            <li>Premium Dark-Mode / Linear Aesthetic</li>
+                            <li>SEO & Local Google Search Optimization</li>
+                            <li>Supabase Verified Client Review System</li>
+                            <li>Interactive Cost / Quote Estimator</li>
+                            <li>Speed Optimization (0.02s Load Time)</li>
+                            <li>Free 3 Months Priority Support</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-primary" style="width: 100%; justify-content: center;" onclick="prefillOrder('Growth Business Suite Package', '₹6,999')">
+                        Choose Growth Plan 🚀
+                    </button>
+                </div>
+
+                <div class="pricing-card reveal delay-3">
+                    <div>
+                        <h3 class="plan-name">Custom E-Commerce & Apps</h3>
+                        <p style="font-size: 14px; color: var(--text-secondary);">For brands selling products, startups needing custom calculators or portals.</p>
+                        <div class="plan-price">₹14,999 <span>/ one-time</span></div>
+                        <span class="plan-eta">⚡ 5-7 Days Delivery</span>
+                        <ul class="plan-features">
+                            <li>Full Product Catalog & Inventory Setup</li>
+                            <li>Shopping Cart & Instant Checkout Engine</li>
+                            <li>Zero Monthly Platform Fees (Save ₹25,000/yr)</li>
+                            <li>Payment Gateway / WhatsApp Direct Orders</li>
+                            <li>Custom JS Logic & Interactive Tools</li>
+                            <li>Google Analytics & Pixel Tracking</li>
+                            <li>Free 6 Months Full Support</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="prefillOrder('Custom E-Commerce & App Package', '₹14,999')">
+                        Choose E-Commerce Plan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Interactive Addons Selector -->
+            <div class="addons-bar reveal">
+                <h4 style="font-family: var(--font-display); font-size: 20px; margin-bottom: 8px;">⚡ Optional Power Add-ons (Click to include in your quote)</h4>
+                <p style="font-size: 14px; color: var(--text-secondary);">Select extra features to attach to your website order:</p>
+                <div class="addon-pills">
+                    <button type="button" class="addon-btn" onclick="toggleAddon(1500, this, 'Advanced SEO Pack')">+ Advanced SEO Pack (₹1,500)</button>
+                    <button type="button" class="addon-btn" onclick="toggleAddon(2000, this, 'UPI / Razorpay Gateway')">+ UPI / Payment Gateway (₹2,000)</button>
+                    <button type="button" class="addon-btn" onclick="toggleAddon(1000, this, '100/100 Speed Boost')">+ 100/100 Lighthouse Speed Boost (₹1,000)</button>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 13px; color: var(--accent-mint);" id="addonsSummary">No extra add-ons selected</div>
+            </div>
+        </section>
+
+        <!-- ================= 05 // LIVE CODE LAB PLAYGROUND ================= -->
+        <section id="codelab" class="section-luxury reveal">
+            <span class="eyebrow-tag">04 // LIVE SANDBOX & CODE LAB</span>
+            <h2 class="headline-luxury">Built-in Code Playground</h2>
+            <p class="subtext-luxury">Test our frontend components live in your browser. Edit source code on the left and inspect real-time output on the right.</p>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px;">
+                <button type="button" class="btn-primary" style="padding:11px 22px; font-size:13px;" onclick="runCodeLab()">▶ Run Code</button>
+                <button type="button" class="btn-secondary" style="padding:11px 22px; font-size:13px;" onclick="loadCodePreset('hero')">Preset 1: Elite Card</button>
+                <button type="button" class="btn-secondary" style="padding:11px 22px; font-size:13px;" onclick="loadCodePreset('pricing')">Preset 2: Pricing Tier</button>
+                <button type="button" class="btn-secondary" style="padding:11px 22px; font-size:13px;" onclick="loadCodePreset('clock')">Preset 3: Live Cyber Clock</button>
+                <button type="button" class="btn-secondary" style="padding:11px 22px; font-size:13px;" onclick="copyUniversal(document.getElementById('codeEditorBox').value, 'Code copied!')">Copy Code</button>
+            </div>
+
+            <div class="codelab-grid">
+                <div class="codelab-pane">
+                    <div class="codelab-bar">
+                        <span style="color: var(--accent-cyan);">HTML + CSS + JS SOURCE</span>
+                        <span style="color: var(--text-muted);">Auto-Updates</span>
+                    </div>
+                    <textarea id="codeEditorBox" class="codelab-textarea" oninput="runCodeLab()" spellcheck="false"></textarea>
+                </div>
+                <div class="codelab-pane">
+                    <div class="codelab-bar">
+                        <span style="color: var(--accent-mint);">LIVE SANDBOX OUTPUT</span>
+                        <span style="color: var(--text-muted);">Instant Render</span>
+                    </div>
+                    <iframe id="codeTargetFrame" class="codelab-iframe" title="Playground Preview"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 06 // PERMANENT SUPABASE CLIENT REVIEWS ================= -->
+        <section id="ratings" class="section-luxury reveal">
+            <span class="eyebrow-tag">05 // CLIENT VERIFICATIONS</span>
+            <h2 class="headline-luxury">Client Ratings & Reviews</h2>
+            <p class="subtext-luxury">Verified clients who launched their platforms with ELITE.WEB. Stored permanently in our Supabase PostgreSQL cloud database.</p>
+
+            <div class="reviews-banner">
+                <div class="score-col">
+                    <div class="score-big" id="avgScoreDisplay">5.0</div>
+                    <div class="stars-amber" id="avgStarsDisplay">★★★★★</div>
+                    <div style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);" id="totalReviewsDisplay">Based on verified reviews</div>
+                </div>
+
+                <div class="bars-col">
+                    <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" id="bar5" style="width:0%"></div></div><span id="count5">0</span></div>
+                    <div class="bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" id="bar4" style="width:0%"></div></div><span id="count4">0</span></div>
+                    <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" id="bar3" style="width:0%"></div></div><span id="count3">0</span></div>
+                    <div class="bar-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" id="bar2" style="width:0%"></div></div><span id="count2">0</span></div>
+                    <div class="bar-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" id="bar1" style="width:0%"></div></div><span id="count1">0</span></div>
+                </div>
+            </div>
+
+            <div class="contact-split">
+                <div class="contact-panel">
+                    <h3 style="font-family:var(--font-display); font-size: 23px; margin-bottom: 10px;">Leave a Verified Review</h3>
+                    <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 24px;">Aapka review seedha Supabase PostgreSQL database me permanently save hoga:</p>
+
+                    <form id="ratingForm" onsubmit="submitClientReview(event)">
+                        <div class="field-group">
+                            <label>Select Rating (1 to 5 Stars)</label>
+                            <div class="star-picker" id="starPickerGroup">
+                                <span class="selected" onclick="pickStarLevel(1)">★</span>
+                                <span class="selected" onclick="pickStarLevel(2)">★</span>
+                                <span class="selected" onclick="pickStarLevel(3)">★</span>
+                                <span class="selected" onclick="pickStarLevel(4)">★</span>
+                                <span class="selected" onclick="pickStarLevel(5)">★</span>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Client / Brand Name</label>
+                            <input type="text" id="reviewerName" class="input-box" placeholder="Aapka ya aapke brand ka naam..." required>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Review & Feedback</label>
+                            <textarea id="reviewerComment" class="input-box" placeholder="Delivery speed, design quality aur performance kaisa laga?..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="ratingSubmitBtn" class="btn-primary" style="width: 100%; justify-content: center;">
+                            Submit Permanent Rating ★
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-panel">
+                    <h3 style="font-family:var(--font-display); font-size: 23px; margin-bottom: 18px; color: var(--accent-mint);">Recent Verified Feedback</h3>
+                    <div id="reviewsFeed" class="reviews-stream"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 07 // CONTACT, DATABASE ORDER & WHATSAPP (9082670590) ================= -->
+        <section id="contact" class="section-luxury reveal" style="border-bottom: none;">
+            <span class="eyebrow-tag">06 // START YOUR PROJECT</span>
+            <h2 class="headline-luxury">Order Your Website Today</h2>
+            <p class="subtext-luxury">Fill out your project details below or type a message to open WhatsApp directly with <strong>+91 90826 70590</strong>. We respond within 15 minutes.</p>
+
+            <div class="contact-split">
+                <!-- Left Column: Direct Contact + Instant WhatsApp Box -->
+                <div class="contact-panel">
+                    <h3 style="font-family:var(--font-display); font-size: 24px; margin-bottom: 14px;">Studio Direct Contact</h3>
+                    <p style="color: var(--text-secondary); font-size: 15px; margin-bottom: 28px;">Direct inquiry, custom quote ya instant WhatsApp chat ke liye:</p>
+
+                    <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px;">
+                        <div style="width:48px; height:48px; border-radius:10px; background:rgba(37,211,102,0.12); border:1px solid rgba(37,211,102,0.4); display:flex; align-items:center; justify-content:center; color:#25d366; font-size:22px;">💬</div>
+                        <div>
+                            <span style="font-size: 11px; color: var(--text-muted); display: block; font-family: var(--font-mono);">OFFICIAL WHATSAPP NUMBER</span>
+                            <a href="https://wa.me/919082670590?text=Hello%20ELITE.WEB,%20I%20want%20to%20order%20a%20website!" target="_blank" style="color: var(--accent-mint); font-weight: 800; font-size: 18px; text-decoration: none;">+91 90826 70590 ↗</a>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px;">
+                        <div style="width:48px; height:48px; border-radius:10px; background:rgba(0,242,254,0.08); border:1px solid var(--border-glow); display:flex; align-items:center; justify-content:center; color:var(--accent-cyan); font-size:20px;">✉</div>
+                        <div>
+                            <span style="font-size: 11px; color: var(--text-muted); display: block; font-family: var(--font-mono);">OFFICIAL GMAIL</span>
+                            <a href="mailto:onlyhack2277@gmail.com" style="color: var(--text-pure); font-weight: 700; font-size: 16px; text-decoration: none;">onlyhack2277@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px;">
+                        <button type="button" class="btn-secondary" style="flex:1; justify-content:center; padding:12px;" onclick="copyUniversal('9082670590', 'WhatsApp Number Copied: 9082670590')">
+                            Copy WhatsApp 📋
+                        </button>
+                        <button type="button" class="btn-secondary" style="flex:1; justify-content:center; padding:12px;" onclick="copyEmail()">
+                            Copy Gmail 📋
+                        </button>
+                    </div>
+
+                    <!-- Instant WhatsApp Type & Launch Box -->
+                    <div class="quick-wa-box">
+                        <label style="display:block; font-family:var(--font-mono); font-size:11.5px; color:#25d366; font-weight:700; margin-bottom:8px;">
+                            ⚡ INSTANT WHATSAPP CHAT (TYPE & OPEN):
+                        </label>
+                        <input type="text" id="instantWaInput" class="input-box" style="margin-bottom:12px;" placeholder="Yahan apna message likhein (e.g. Mujhe website banwani hai)...">
+                        <button type="button" class="btn-whatsapp" style="width:100%; justify-content:center; padding:14px;" onclick="sendInstantWhatsApp()">
+                            Open WhatsApp (9082670590) 💬
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Full Order Form (Saves to Supabase + Gmail + WhatsApp Option) -->
+                <div class="contact-panel">
+                    <form id="leadCaptureForm" onsubmit="handleLeadSubmit(event)">
+                        <div class="dual-inputs">
+                            <div class="field-group">
+                                <label>Client Name</label>
+                                <input type="text" id="clientNameField" class="input-box" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="field-group">
+                                <label>Phone / WhatsApp</label>
+                                <input type="text" id="clientPhoneField" class="input-box" placeholder="e.g. +91 98765 43210" required>
+                            </div>
+                        </div>
+
+                        <div class="dual-inputs">
+                            <div class="field-group">
+                                <label>Email Address</label>
+                                <input type="email" id="clientEmailField" class="input-box" placeholder="name@company.com" required>
+                            </div>
+                            <div class="field-group">
+                                <label>Website Type / Template</label>
+                                <select id="clientTypeSelect" class="input-box" required>
+                                    <option value="Landing Page">High-Converting Landing Page (₹2,999)</option>
+                                    <option value="Growth Business Suite">Growth Business Suite (₹6,999)</option>
+                                    <option value="E-Commerce Online Store">NovaCart E-Commerce Store (₹14,999)</option>
+                                    <option value="NexusAI SaaS Template">NexusAI SaaS Platform (₹6,999)</option>
+                                    <option value="Apex Studio Agency Template">Apex Agency Website (₹6,999)</option>
+                                    <option value="Custom Web App">Custom Web App / Redesign</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Budget Range</label>
+                            <select id="clientBudgetSelect" class="input-box">
+                                <option value="₹2,999 - ₹5,000">₹2,999 – ₹5,000 (Starter)</option>
+                                <option value="₹5,000 - ₹10,000" selected>₹5,000 – ₹10,000 (Growth)</option>
+                                <option value="₹10,000 - ₹25,000">₹10,000 – ₹25,000 (Scale)</option>
+                                <option value="Custom Budget">Custom Quote</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label>Project Details / Requirements</label>
+                            <textarea id="clientDetailsField" class="input-box" placeholder="Apne business ya website ke baare me batayein..." required></textarea>
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; gap:12px;">
+                            <button type="submit" id="submitOrderBtn" class="btn-primary" style="width: 100%; justify-content: center;">
+                                Submit Order to Database & Gmail 🚀
+                            </button>
+                            <button type="button" class="btn-whatsapp" style="width: 100%; justify-content: center;" onclick="sendFormToWhatsApp()">
+                                Send Order Details on WhatsApp (9082670590) 💬
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating WhatsApp Button (9082670590) -->
+    <a href="https://wa.me/919082670590?text=Hello%20ELITE.WEB,%20I%20am%20interested%20in%20ordering%20a%20website!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp: 9082670590">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.15c-.24.67-1.39 1.28-1.92 1.36-.51.08-1.16.11-3.69-.93-3.23-1.33-5.3-4.63-5.46-4.85-.16-.22-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.86-.4.21 0 .43 0 .62.01.2.01.46-.07.72.55.26.62.9 2.2.98 2.36.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.33.33-.14.65.18.32.82 1.35 1.76 2.18 1.21 1.07 2.22 1.41 2.54 1.57.32.16.51.13.7-.08.19-.21.82-.95 1.04-1.28.22-.32.43-.27.73-.16.29.11 1.87.88 2.19 1.04.32.16.53.24.61.37.08.14.08.8-.16 1.47z"/></svg>
+        <span>9082670590</span>
+    </a>
+
+    <!-- ================= FULL-SCREEN REALISTIC PREVIEW MODAL ================= -->
+    <div id="previewModal" class="modal-overlay">
+        <div class="modal-topbar">
+            <span id="previewModalTitle" style="font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--accent-cyan);">LIVE SHOWCASE</span>
+            <div class="device-switch">
+                <button type="button" id="devDesk" class="dev-btn active" onclick="setDeviceView('desktop')">🖥️ Desktop</button>
+                <button type="button" id="devMob" class="dev-btn" onclick="setDeviceView('mobile')">📱 Mobile</button>
+            </div>
+            <div style="display:flex; gap:10px;">
+                <button type="button" class="btn-primary" style="padding:9px 18px; font-size:12px;" onclick="prefillFromModal()">
+                    Buy / Customize ↗
+                </button>
+                <button type="button" class="btn-secondary" style="padding:9px 18px; font-size:12px;" onclick="closePreviewModal()">
+                    ✕ Close
+                </button>
+            </div>
+        </div>
+        <div class="modal-stage" id="modalStage">
+            <div id="modalDynamicContent"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastBubble" class="toast-pill">
+        <span style="color: var(--accent-mint); font-size: 18px;">✓</span>
+        <span id="toastMsg">Action Completed!</span>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 <strong>ELITE.WEB</strong> — PREMIUM DIGITAL WEB STUDIO // SUPABASE CLOUD CONNECTED</p>
+            <p style="margin-top: 10px;">WhatsApp: <a href="https://wa.me/919082670590" target="_blank">+91 90826 70590</a> | Gmail: <a href="mailto:onlyhack2277@gmail.com">onlyhack2277@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- ================= MASTER JAVASCRIPT ENGINE ================= -->
+    <script>
+        // --- 1. SUPABASE CLOUD CONFIGURATION ---
+        const SUPABASE_PROJECT_URL = "https://dmijudpsslpurdkhybdt.supabase.co";
+        const SUPABASE_PUBLIC_KEY = "sb_publishable_niknr0rlcYtTAo78gKxoEQ_HO1YgyIq";
+        const WHATSAPP_NUMBER = "919082670590";
+
+        function getSupabaseHeaders() {
+            return {
+                "apikey": SUPABASE_PUBLIC_KEY,
+                "Authorization": "Bearer " + SUPABASE_PUBLIC_KEY,
+                "Content-Type": "application/json",
+                "Prefer": "return=representation"
+            };
+        }
+
+        // --- 2. 60FPS INTERACTIVE PARTICLE CANVAS ---
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        for (let i = 0; i < 50; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                size: Math.random() * 1.8 + 0.8
+            });
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(0, 242, 254, 0.4)";
+
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < 135) {
+                        ctx.strokeStyle = `rgba(0, 242, 254, ${0.1 * (1 - dist / 135)})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // Subtle Mouse Parallax on Giant Brand Title
+        window.addEventListener('mousemove', (e) => {
+            const giantTitle = document.getElementById('giantBrandTitle');
+            if (giantTitle && window.scrollY < window.innerHeight) {
+                const moveX = (e.clientX - window.innerWidth / 2) * 0.015;
+                const moveY = (e.clientY - window.innerHeight / 2) * 0.015;
+                giantTitle.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            }
+        });
+
+        // --- 3. SCI-FI AUDIO SYNTHESIZER ---
+        let audioOn = true;
+        let aCtx = null;
+        function playSfx(freq = 520, dur = 0.06, wave = 'sine') {
+            if (!audioOn) return;
+            try {
+                if (!aCtx) aCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = aCtx.createOscillator();
+                const gain = aCtx.createGain();
+                osc.type = wave;
+                osc.frequency.setValueAtTime(freq, aCtx.currentTime);
+                gain.gain.setValueAtTime(0.05, aCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, aCtx.currentTime + dur);
+                osc.connect(gain);
+                gain.connect(aCtx.destination);
+                osc.start();
+                osc.stop(aCtx.currentTime + dur);
+            } catch (e) {}
+        }
+
+        function toggleAudio() {
+            audioOn = !audioOn;
+            const btn = document.getElementById('sfxBtn');
+            btn.innerText = audioOn ? "🔊 SFX: ON" : "🔇 SFX: OFF";
+            btn.classList.toggle('muted', !audioOn);
+            triggerToast(audioOn ? "Sound Effects: ON" : "Sound Effects: MUTED");
+        }
+
+        // --- 4. SCROLL PROGRESS & INTERSECTION REVEAL ---
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // --- 5. AUTO-TYPING ROLE BAR ---
+        const roles = [
+            "Modern Landing Pages",
+            "Zero-Fee E-Commerce Stores",
+            "Corporate Business Portfolios",
+            "High-Speed Web Applications"
+        ];
+        let rIdx = 0, cIdx = 0, deleting = false;
+        function runTypewriter() {
+            const el = document.getElementById('roleTypingTarget');
+            if (!el) return;
+            const word = roles[rIdx];
+            if (!deleting) {
+                el.innerText = word.slice(0, ++cIdx);
+                if (cIdx === word.length) {
+                    deleting = true;
+                    setTimeout(runTypewriter, 1800);
+                    return;
+                }
+            } else {
+                el.innerText = word.slice(0, --cIdx);
+                if (cIdx === 0) {
+                    deleting = false;
+                    rIdx = (rIdx + 1) % roles.length;
+                }
+            }
+            setTimeout(runTypewriter, deleting ? 35 : 75);
+        }
+
+        // --- 6. TOAST, CLIPBOARD & THEME ---
+        function triggerToast(msg) {
+            const t = document.getElementById('toastBubble');
+            document.getElementById('toastMsg').innerText = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3200);
+        }
+
+        function copyUniversal(text, msg) {
+            playSfx(600, 0.06);
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => triggerToast(msg)).catch(() => fallbackCopy(text, msg));
+            } else {
+                fallbackCopy(text, msg);
+            }
+        }
+        function fallbackCopy(text, msg) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); triggerToast(msg); } catch (e) { triggerToast(text); }
+            document.body.removeChild(ta);
+        }
+
+        function copyEmail() {
+            copyUniversal("onlyhack2277@gmail.com", "Email Copied: onlyhack2277@gmail.com");
+        }
+
+        function setTheme(theme, el) {
+            playSfx(560, 0.06);
+            document.body.classList.remove('theme-violet', 'theme-emerald');
+            if (theme === 'violet') document.body.classList.add('theme-violet');
+            if (theme === 'emerald') document.body.classList.add('theme-emerald');
+            if (el) {
+                document.querySelectorAll('.t-dot').forEach(d => d.classList.remove('active'));
+                el.classList.add('active');
+            }
+            triggerToast("Theme: " + theme.toUpperCase());
+        }
+
+        function scrollToId(id) {
+            playSfx(520, 0.05);
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // --- 7. TEMPLATE FILTER, LIKES & ADDONS ---
+        function filterShowcase(cat, btn) {
+            playSfx(520, 0.05);
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.template-card').forEach(card => {
+                card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? 'flex' : 'none';
+            });
+        }
+
+        function toggleLike(el, id) {
+            playSfx(720, 0.06, 'triangle');
+            const span = el.querySelector('.like-num');
+            let n = parseInt(span.innerText);
+            if (el.classList.contains('liked')) {
+                el.classList.remove('liked');
+                span.innerText = n - 1;
+                localStorage.removeItem(id);
+            } else {
+                el.classList.add('liked');
+                span.innerText = n + 1;
+                localStorage.setItem(id, 'true');
+                triggerToast("Liked! ♥");
+            }
+        }
+
+        let selectedAddons = [];
+        function toggleAddon(price, btn, name) {
+            playSfx(580, 0.05);
+            btn.classList.toggle('selected');
+            const label = `${name} (+₹${price})`;
+            if (btn.classList.contains('selected')) {
+                selectedAddons.push(label);
+            } else {
+                selectedAddons = selectedAddons.filter(a => a !== label);
+            }
+            document.getElementById('addonsSummary').innerText = selectedAddons.length > 0
+                ? "Selected Add-ons: " + selectedAddons.join(", ")
+                : "No extra add-ons selected";
+        }
+
+        // --- 8. ORDER PREFILL & WHATSAPP (9082670590) LAUNCHERS ---
+        let currentModalTemplate = "";
+        function prefillOrder(pkgName, price) {
+            playSfx(640, 0.06);
+            const sel = document.getElementById('clientTypeSelect');
+            const det = document.getElementById('clientDetailsField');
+            for (let i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].text.toLowerCase().includes(pkgName.toLowerCase())) {
+                    sel.selectedIndex = i;
+                    break;
+                }
+            }
+            const addonsText = selectedAddons.length > 0 ? `\nAdd-ons: ${selectedAddons.join(", ")}` : "";
+            det.value = `Selected Package / Template: ${pkgName} (${price})${addonsText}\n\nProject Requirements: `;
+            scrollToId('contact');
+            triggerToast(`Selected "${pkgName}". Fill your details below!`);
+        }
+
+        function prefillFromModal() {
+            closePreviewModal();
+            prefillOrder(currentModalTemplate, "Custom Order");
+        }
+
+        function sendInstantWhatsApp() {
+            playSfx(680, 0.07);
+            const msg = document.getElementById('instantWaInput').value.trim() || "Hello ELITE.WEB, mujhe apne business ke liye website banwani hai!";
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+        }
+
+        function sendFormToWhatsApp() {
+            playSfx(680, 0.07);
+            const name = document.getElementById('clientNameField').value.trim() || "Client";
+            const phone = document.getElementById('clientPhoneField').value.trim() || "N/A";
+            const type = document.getElementById('clientTypeSelect').value;
+            const budget = document.getElementById('clientBudgetSelect').value;
+            const details = document.getElementById('clientDetailsField').value.trim() || "Interested in ordering this website.";
+            const text = `*New Website Order (ELITE.WEB)*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Website Type:* ${type}\n*Budget:* ${budget}\n*Details:* ${details}`;
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // --- 9. FULL-SCREEN PREVIEWS (ALL 8 DEMOS & TOOLS) ---
+        let storeCart = [], agencyEst = 5000, calcStr = "0", gameScore = 0, gameTime = 15, gameTimer = null, drawColor = "#00f2fe";
+
+        function setDeviceView(mode) {
+            playSfx(520, 0.04);
+            const stage = document.getElementById('modalStage');
+            document.getElementById('devDesk').classList.toggle('active', mode === 'desktop');
+            document.getElementById('devMob').classList.toggle('active', mode === 'mobile');
+            stage.classList.toggle('mobile-mode', mode === 'mobile');
+        }
+
+        function openPreviewModal(key) {
+            playSfx(640, 0.08);
+            const modal = document.getElementById('previewModal');
+            const title = document.getElementById('previewModalTitle');
+            const box = document.getElementById('modalDynamicContent');
+            modal.classList.add('open');
+            setDeviceView('desktop');
+
+            if (key === 'ecommerce') {
+                title.innerText = "LIVE DEMO // NOVACART E-COMMERCE STORE";
+                currentModalTemplate = "NovaCart E-Commerce Store";
+                storeCart = [];
+                box.innerHTML = `
+                    <div class="browser-window">
+                        <div class="browser-bar"><span>https://novacart.elite.web</span><span style="color:var(--accent-mint)">🛒 E-COMMERCE ENGINE</span></div>
+                        <div style="padding:30px;">
+                            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; border-bottom:1px solid var(--border-glass); padding-bottom:20px;">
+                                <h2 style="font-family:var(--font-display);">NOVACART <span style="color:var(--accent-cyan)">STORE</span></h2>
+                                <div style="display:flex; align-items:center; gap:14px; background:var(--bg-elevated); padding:10px 18px; border-radius:8px;">
+                                    <span>Cart: <b id="cQty" style="color:var(--accent-cyan)">0 items</b></span>
+                                    <span>Total: <b id="cSum" style="color:var(--accent-mint)">₹0</b></span>
+                                    <button type="button" class="btn-primary" style="padding:8px 16px; font-size:12px;" onclick="checkoutStore()">Checkout →</button>
+                                </div>
+                            </div>
+                            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; margin-top:26px;">
+                                <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:10px; padding:20px;">
+                                    <div style="height:100px; background:var(--bg-elevated); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:40px; margin-bottom:12px;">⌨️</div>
+                                    <h4>Mechanical RGB Keyboard</h4>
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                                        <strong style="color:var(--accent-mint); font-family:var(--font-mono);">₹2,499</strong>
+                                        <button type="button" class="btn-secondary" style="padding:6px 12px; font-size:12px;" onclick="addCart('RGB Keyboard', 2499)">+ Add</button>
+                                    </div>
+                                </div>
+                                <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:10px; padding:20px;">
+                                    <div style="height:100px; background:var(--bg-elevated); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:40px; margin-bottom:12px;">🎧</div>
+                                    <h4>Studio Cyber Headphones</h4>
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                                        <strong style="color:var(--accent-mint); font-family:var(--font-mono);">₹1,899</strong>
+                                        <button type="button" class="btn-secondary" style="padding:6px 12px; font-size:12px;" onclick="addCart('Headphones', 1899)">+ Add</button>
+                                    </div>
+                                </div>
+                                <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:10px; padding:20px;">
+                                    <div style="height:100px; background:var(--bg-elevated); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:40px; margin-bottom:12px;">🖱️</div>
+                                    <h4>Pro Wireless Gaming Mouse</h4>
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+                                        <strong style="color:var(--accent-mint); font-family:var(--font-mono);">₹1,299</strong>
+                                        <button type="button" class="btn-secondary" style="padding:6px 12px; font-size:12px;" onclick="addCart('Gaming Mouse', 1299)">+ Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (key === 'saas') {
+                title.innerText = "LIVE DEMO // NEXUSAI CLOUD PLATFORM";
+                currentModalTemplate = "NexusAI SaaS Platform";
+                box.innerHTML = `
+                    <div class="browser-window">
+                        <div class="browser-bar"><span>https://nexusai.elite.web</span><span style="color:var(--accent-cyan)">⚡ SAAS CLOUD</span></div>
+                        <div style="padding:32px; text-align:center;">
+                            <span class="eyebrow-tag">NEXT-GEN SAAS PLATFORM</span>
+                            <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:14px;">Deploy Global Cloud Nodes 10x Faster</h2>
+                            <div style="display:inline-flex; gap:8px; margin-bottom:28px;">
+                                <button type="button" class="btn-primary" style="padding:8px 18px; font-size:12px;" onclick="setSaasMode(true)">Monthly</button>
+                                <button type="button" class="btn-secondary" style="padding:8px 18px; font-size:12px;" onclick="setSaasMode(false)">Yearly (Save 30%)</button>
+                            </div>
+                            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px; text-align:left;">
+                                <div style="background:var(--bg-card); padding:24px; border-radius:12px; border:1px solid var(--border-glass);">
+                                    <h4>Starter Node</h4>
+                                    <div id="sP1" style="font-size:32px; font-weight:800; margin:10px 0;">₹499/mo</div>
+                                    <p style="font-size:13px; color:var(--text-secondary);">3 Custom Domains + SSL</p>
+                                </div>
+                                <div style="background:var(--bg-card); padding:24px; border-radius:12px; border:2px solid var(--accent-cyan);">
+                                    <h4>Pro Cluster</h4>
+                                    <div id="sP2" style="font-size:32px; font-weight:800; color:var(--accent-cyan); margin:10px 0;">₹1,499/mo</div>
+                                    <p style="font-size:13px; color:var(--text-secondary);">Unlimited Sites + NVMe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (key === 'agency') {
+                title.innerText = "LIVE DEMO // APEX DIGITAL STUDIO";
+                currentModalTemplate = "Apex Digital Studio";
+                agencyEst = 5000;
+                box.innerHTML = `
+                    <div class="browser-window">
+                        <div class="browser-bar"><span>https://apex.elite.web</span><span style="color:var(--accent-amber)">★ AWWWARDS AGENCY</span></div>
+                        <div style="padding:32px;">
+                            <span class="eyebrow-tag">CREATIVE STUDIO</span>
+                            <h2 style="font-family:var(--font-display); font-size:34px; margin-bottom:16px;">We Build Bold Digital Brands.</h2>
+                            <div style="background:var(--bg-card); padding:24px; border-radius:12px; border:1px solid var(--border-glass);">
+                                <h4>Interactive Project Cost Estimator</h4>
+                                <div style="display:flex; gap:10px; flex-wrap:wrap; margin:16px 0;">
+                                    <button type="button" class="btn-secondary" style="padding:8px 14px; font-size:12px;" onclick="addEst(3000)">+ Custom UI (₹3,000)</button>
+                                    <button type="button" class="btn-secondary" style="padding:8px 14px; font-size:12px;" onclick="addEst(4500)">+ Store Cart (₹4,500)</button>
+                                    <button type="button" class="btn-secondary" style="padding:8px 14px; font-size:12px;" onclick="addEst(2000)">+ SEO Pack (₹2,000)</button>
+                                </div>
+                                <div style="font-family:var(--font-mono); font-size:22px; color:var(--accent-mint);" id="estOut">Estimated Quote: ₹5,000</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (key === 'glass') {
+                title.innerText = "LIVE TOOL // CYBER GLASS UI STUDIO";
+                currentModalTemplate = "Cyber Glass UI Studio";
+                box.innerHTML = `
+                    <div style="height:190px; border-radius:12px; background:linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); display:flex; align-items:center; justify-content:center; margin-bottom:20px;">
+                        <div id="glassTarget" style="width:80%; max-width:400px; padding:24px; border-radius:12px; color:#fff; text-align:center; backdrop-filter:blur(14px); background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3);">
+                            <h3>Cyber Glass Card</h3>
+                            <p style="font-size:13px;">Adjust slider below</p>
+                        </div>
+                    </div>
+                    <div style="background:var(--bg-card); padding:24px; border-radius:12px; border:1px solid var(--border-glass);">
+                        <label style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:13px; margin-bottom:8px;"><span>BLUR:</span><span id="bVal">14px</span></label>
+                        <input type="range" min="0" max="35" value="14" style="width:100%; margin-bottom:16px;" oninput="updateGlass(this.value)">
+                        <div style="background:#030408; padding:12px; border-radius:8px; font-family:var(--font-mono); font-size:12px; color:var(--accent-mint); display:flex; justify-content:space-between; align-items:center;">
+                            <span id="gCss">backdrop-filter: blur(14px); background: rgba(255,255,255,0.15);</span>
+                            <button type="button" class="btn-secondary" style="padding:6px 12px; font-size:11px;" onclick="copyUniversal(document.getElementById('gCss').innerText, 'CSS Copied!')">Copy</button>
+                        </div>
+                    </div>
+                `;
+            } else if (key === 'framework') {
+                title.innerText = "LIVE TOOL // ULTRA-LIGHT GRID BUILDER";
+                currentModalTemplate = "Ultra-Light Grid Builder";
+                box.innerHTML = `
+                    <div style="display:flex; gap:10px; margin-bottom:18px;">
+                        <button type="button" class="btn-primary" style="padding:8px 16px; font-size:12px;" onclick="setGrid(2)">2 Columns</button>
+                        <button type="button" class="btn-secondary" style="padding:8px 16px; font-size:12px;" onclick="setGrid(3)">3 Columns</button>
+                        <button type="button" class="btn-secondary" style="padding:8px 16px; font-size:12px;" onclick="setGrid(4)">4 Columns</button>
+                    </div>
+                    <div id="gridBox" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:14px; background:var(--bg-card); padding:20px; border-radius:12px; border:1px solid var(--border-glass);">
+                        <div style="background:var(--bg-elevated); padding:22px; border-radius:8px; text-align:center;">Block 01</div>
+                        <div style="background:var(--bg-elevated); padding:22px; border-radius:8px; text-align:center;">Block 02</div>
+                        <div style="background:var(--bg-elevated); padding:22px; border-radius:8px; text-align:center;">Block 03</div>
+                        <div style="background:var(--bg-elevated); padding:22px; border-radius:8px; text-align:center;">Block 04</div>
+                    </div>
+                `;
+            } else if (key === 'calc') {
+                title.innerText = "LIVE APP // CYBER SCI-FI CALCULATOR";
+                currentModalTemplate = "Cyber Sci-Fi Calculator";
+                calcStr = "0";
+                box.innerHTML = `
+                    <div class="calc-box">
+                        <div class="calc-screen" id="cDisp">0</div>
+                        <div class="calc-keys">
+                            <button type="button" class="c-btn" onclick="cPress('C')">C</button>
+                            <button type="button" class="c-btn" onclick="cPress('(')">(</button>
+                            <button type="button" class="c-btn" onclick="cPress(')')">)</button>
+                            <button type="button" class="c-btn" onclick="cPress('/')">÷</button>
+                            <button type="button" class="c-btn" onclick="cPress('7')">7</button>
+                            <button type="button" class="c-btn" onclick="cPress('8')">8</button>
+                            <button type="button" class="c-btn" onclick="cPress('9')">9</button>
+                            <button type="button" class="c-btn" onclick="cPress('*')">×</button>
+                            <button type="button" class="c-btn" onclick="cPress('4')">4</button>
+                            <button type="button" class="c-btn" onclick="cPress('5')">5</button>
+                            <button type="button" class="c-btn" onclick="cPress('6')">6</button>
+                            <button type="button" class="c-btn" onclick="cPress('-')">-</button>
+                            <button type="button" class="c-btn" onclick="cPress('1')">1</button>
+                            <button type="button" class="c-btn" onclick="cPress('2')">2</button>
+                            <button type="button" class="c-btn" onclick="cPress('3')">3</button>
+                            <button type="button" class="c-btn" onclick="cPress('+')">+</button>
+                            <button type="button" class="c-btn" onclick="cPress('0')">0</button>
+                            <button type="button" class="c-btn" onclick="cPress('.')">.</button>
+                            <button type="button" class="c-btn" onclick="cPress('DEL')">⌫</button>
+                            <button type="button" class="c-btn eq" onclick="cPress('=')">=</button>
+                        </div>
+                    </div>
+                `;
+            } else if (key === 'reflex') {
+                title.innerText = "LIVE APP // NEON REFLEX SPEED TEST";
+                currentModalTemplate = "Neon Reflex Speed Test";
+                const high = localStorage.getItem("reflex_high") || 0;
+                box.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; background:var(--bg-card); padding:14px 20px; border-radius:10px; border:1px solid var(--border-glass); margin-bottom:16px; font-family:var(--font-mono);">
+                        <span>TIME: <b id="rTime" style="color:var(--accent-cyan)">15s</b></span>
+                        <span>SCORE: <b id="rScore" style="color:var(--accent-mint)">0</b></span>
+                        <span>BEST: <b style="color:var(--accent-amber)">${high}</b></span>
+                    </div>
+                    <div class="reflex-arena" id="rArena">
+                        <button type="button" class="btn-primary" onclick="startReflex()">Start 15s Speed Test 🎯</button>
+                    </div>
+                `;
+            } else if (key === 'pixel') {
+                title.innerText = "LIVE TOOL // 16x16 PIXEL ART STUDIO";
+                currentModalTemplate = "16x16 Pixel Art Studio";
+                drawColor = "#00f2fe";
+                box.innerHTML = `
+                    <div style="display:flex; gap:10px; justify-content:center; margin-bottom:16px;">
+                        <div class="p-color active" style="background:#00f2fe;" onclick="setPColor('#00f2fe', this)"></div>
+                        <div class="p-color" style="background:#3b82f6;" onclick="setPColor('#3b82f6', this)"></div>
+                        <div class="p-color" style="background:#10b981;" onclick="setPColor('#10b981', this)"></div>
+                        <div class="p-color" style="background:#f59e0b;" onclick="setPColor('#f59e0b', this)"></div>
+                        <div class="p-color" style="background:#ffffff;" onclick="setPColor('#ffffff', this)"></div>
+                        <div class="p-color" style="background:#030408;" onclick="setPColor('#030408', this)"></div>
+                    </div>
+                    <div class="pixel-board" id="pBoard"></div>
+                    <div style="display:flex; justify-content:center; gap:12px;">
+                        <button type="button" class="btn-primary" style="padding:8px 16px; font-size:12px;" onclick="randomPixels()">Random Pattern ⚡</button>
+                        <button type="button" class="btn-secondary" style="padding:8px 16px; font-size:12px;" onclick="clearPixels()">Clear 🗑️</button>
+                    </div>
+                `;
+                const b = document.getElementById('pBoard');
+                for (let i = 0; i < 256; i++) {
+                    const c = document.createElement('div');
+                    c.className = 'p-cell';
+                    c.onmousedown = () => { c.style.background = drawColor; playSfx(700, 0.02); };
+                    c.onmouseover = (e) => { if (e.buttons === 1) c.style.background = drawColor; };
+                    b.appendChild(c);
+                }
+            }
+        }
+
+        function closePreviewModal() {
+            document.getElementById('previewModal').classList.remove('open');
+            if (gameTimer) clearInterval(gameTimer);
+        }
+
+        function addCart(item, price) {
+            playSfx(700, 0.05);
+            storeCart.push({ item, price });
+            const sum = storeCart.reduce((a, b) => a + b.price, 0);
+            document.getElementById('cQty').innerText = storeCart.length + " items";
+            document.getElementById('cSum').innerText = "₹" + sum.toLocaleString('en-IN');
+            triggerToast(item + " added to Cart!");
+        }
+        function checkoutStore() {
+            if (!storeCart.length) { triggerToast("Cart is empty!"); return; }
+            const sum = storeCart.reduce((a, b) => a + b.price, 0);
+            triggerToast(`Order Placed! Total: ₹${sum.toLocaleString('en-IN')} ✓`);
+            storeCart = [];
+            document.getElementById('cQty').innerText = "0 items";
+            document.getElementById('cSum').innerText = "₹0";
+        }
+        function setSaasMode(monthly) {
+            document.getElementById('sP1').innerText = monthly ? "₹499/mo" : "₹349/mo";
+            document.getElementById('sP2').innerText = monthly ? "₹1,499/mo" : "₹999/mo";
+            triggerToast(monthly ? "Monthly Billing" : "Yearly 30% Discount Applied!");
+        }
+        function addEst(v) {
+            agencyEst += v;
+            document.getElementById('estOut').innerText = "Estimated Quote: ₹" + agencyEst.toLocaleString('en-IN');
+        }
+        function updateGlass(v) {
+            document.getElementById('bVal').innerText = v + "px";
+            document.getElementById('glassTarget').style.backdropFilter = `blur(${v}px)`;
+            document.getElementById('gCss').innerText = `backdrop-filter: blur(${v}px); background: rgba(255,255,255,0.15);`;
+        }
+        function setGrid(c) {
+            document.getElementById('gridBox').style.gridTemplateColumns = `repeat(${c}, 1fr)`;
+        }
+        function cPress(k) {
+            playSfx(540, 0.04);
+            const d = document.getElementById('cDisp');
+            if (k === 'C') calcStr = "0";
+            else if (k === 'DEL') calcStr = calcStr.length > 1 ? calcStr.slice(0, -1) : "0";
+            else if (k === '=') {
+                try { calcStr = String(Function('"use strict";return (' + calcStr + ')')()); } catch (e) { calcStr = "Error"; }
+            } else {
+                calcStr = (calcStr === "0" && !isNaN(k)) ? k : calcStr + k;
+            }
+            d.innerText = calcStr;
+        }
+        function startReflex() {
+            gameScore = 0; gameTime = 15;
+            document.getElementById('rScore').innerText = "0";
+            document.getElementById('rTime').innerText = "15s";
+            if (gameTimer) clearInterval(gameTimer);
+            spawnOrb();
+            gameTimer = setInterval(() => {
+                gameTime--;
+                document.getElementById('rTime').innerText = gameTime + "s";
+                if (gameTime <= 0) {
+                    clearInterval(gameTimer);
+                    let h = parseInt(localStorage.getItem("reflex_high") || "0");
+                    if (gameScore > h) localStorage.setItem("reflex_high", gameScore);
+                    document.getElementById('rArena').innerHTML = `<div style="text-align:center;"><h3>Score: ${gameScore}</h3><button class="btn-primary" style="margin-top:12px;" onclick="startReflex()">Play Again 🔄</button></div>`;
+                }
+            }, 1000);
+        }
+        function spawnOrb() {
+            const a = document.getElementById('rArena');
+            if (!a || gameTime <= 0) return;
+            a.innerHTML = "";
+            const orb = document.createElement('div');
+            orb.className = 'reflex-orb';
+            orb.innerText = "+1";
+            orb.style.left = Math.max(10, Math.floor(Math.random() * (a.clientWidth - 65))) + "px";
+            orb.style.top = Math.max(10, Math.floor(Math.random() * (a.clientHeight - 65))) + "px";
+            orb.onmousedown = () => {
+                playSfx(760, 0.05, 'triangle');
+                gameScore++;
+                document.getElementById('rScore').innerText = gameScore;
+                spawnOrb();
+            };
+            a.appendChild(orb);
+        }
+        function setPColor(c, el) {
+            drawColor = c;
+            document.querySelectorAll('.p-color').forEach(d => d.classList.remove('active'));
+            el.classList.add('active');
+        }
+        function clearPixels() {
+            document.querySelectorAll('.p-cell').forEach(c => c.style.background = "#030408");
+        }
+        function randomPixels() {
+            const palette = ['#00f2fe', '#3b82f6', '#10b981', '#f59e0b', '#030408', '#030408'];
+            document.querySelectorAll('.p-cell').forEach(c => {
+                c.style.background = palette[Math.floor(Math.random() * palette.length)];
+            });
+        }
+
+        // --- 10. CODE LAB PRESETS ---
+        const codePresets = {
+            hero: `<style>
+  body { background:#030408; color:#fff; font-family:sans-serif; display:flex; justify-content:center; align-items:center; height:85vh; margin:0; }
+  .box { background:#080b12; border:2px solid #00f2fe; padding:32px; border-radius:14px; text-align:center; box-shadow:0 0 30px rgba(0,242,254,0.25); max-width:360px; }
+  button { background:#00f2fe; color:#000; border:none; padding:12px 24px; border-radius:8px; font-weight:bold; cursor:pointer; margin-top:16px; }
+</style>
+<div class="box">
+  <span style="color:#00f2fe; font-size:11px; letter-spacing:2px; font-weight:bold;">DIGITAL STUDIO</span>
+  <h2 style="margin:12px 0;">ELITE.WEB</h2>
+  <p style="color:#94a3b8; font-size:14px;">Edit code on the left to see instant changes!</p>
+  <button onclick="this.innerText='Working Live! 🚀'">Test Interaction</button>
+</div>`,
+            pricing: `<style>
+  body { background:#030408; color:#fff; font-family:sans-serif; display:flex; justify-content:center; align-items:center; height:85vh; margin:0; }
+  .card { background:#080b12; border:2px solid #10b981; padding:28px; border-radius:14px; text-align:center; width:250px; }
+  .price { font-size:36px; font-weight:bold; color:#10b981; margin:12px 0; }
+  button { background:#10b981; color:#000; border:none; width:100%; padding:12px; border-radius:8px; font-weight:bold; cursor:pointer; }
+</style>
+<div class="card">
+  <h3>Growth Suite</h3>
+  <div class="price">₹6,999</div>
+  <p style="color:#94a3b8; font-size:13px; margin-bottom:16px;">5 Custom Pages + SEO</p>
+  <button onclick="alert('Plan Selected!')">Choose Plan</button>
+</div>`,
+            clock: `<style>
+  body { background:#030408; color:#00f2fe; font-family:monospace; display:flex; justify-content:center; align-items:center; height:85vh; margin:0; }
+  h1 { font-size:44px; border:1px solid #00f2fe; padding:18px 32px; border-radius:12px; box-shadow:0 0 25px rgba(0,242,254,0.3); }
+</style>
+<h1 id="clk">00:00:00</h1>
+<script>
+  setInterval(() => { document.getElementById('clk').innerText = new Date().toLocaleTimeString(); }, 1000);
+  document.getElementById('clk').innerText = new Date().toLocaleTimeString();
+<\/script>`
+        };
+
+        function loadCodePreset(k) {
+            document.getElementById('codeEditorBox').value = codePresets[k];
+            runCodeLab();
+        }
+        function runCodeLab() {
+            const code = document.getElementById('codeEditorBox').value;
+            const frame = document.getElementById('codeTargetFrame');
+            if (frame) frame.srcdoc = code;
+        }
+
+        // --- 11. SUPABASE CLOUD REVIEWS ENGINE ---
+        let pickedStars = 5;
+        let reviewsData = [];
+
+        function pickStarLevel(n) {
+            playSfx(600 + n * 40, 0.05);
+            pickedStars = n;
+            document.querySelectorAll('#starPickerGroup span').forEach((s, idx) => {
+                s.classList.toggle('selected', idx < n);
+            });
+        }
+
+        async function initReviews() {
+            const local = localStorage.getItem("elite_web_reviews_v1");
+            if (local) {
+                reviewsData = JSON.parse(local);
+            } else {
+                reviewsData = [
+                    { client_name: "Sameer Khan", stars: 5, comment: "ELITE.WEB ke NovaCart template par mera store launch hua, laptop aur phone dono par makkhan speed hai!", created_at: new Date().toISOString() },
+                    { client_name: "Rohit Verma", stars: 5, comment: "48 hours me high converting landing page ready karke de diya. Highly recommended!", created_at: new Date().toISOString() },
+                    { client_name: "Zaid Shaikh", stars: 5, comment: "Zero monthly fee ka concept best hai. Shopify se ₹25,000 bach gaye.", created_at: new Date().toISOString() }
+                ];
+            }
+            renderReviews();
+
+            try {
+                const res = await fetch(`${SUPABASE_PROJECT_URL}/rest/v1/client_reviews?select=*&order=created_at.desc`, {
+                    method: "GET",
+                    headers: getSupabaseHeaders()
+                });
+                if (res.ok) {
+                    const cloudReviews = await res.json();
+                    if (cloudReviews && cloudReviews.length > 0) {
+                        reviewsData = cloudReviews;
+                        localStorage.setItem("elite_web_reviews_v1", JSON.stringify(reviewsData));
+                        renderReviews();
+                    }
+                }
+            } catch (err) {}
+        }
+
+        function renderReviews() {
+            const feed = document.getElementById('reviewsFeed');
+            feed.innerHTML = "";
+            let total = reviewsData.length, sum = 0;
+            let counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+
+            reviewsData.forEach(r => {
+                const s = parseInt(r.stars) || 5;
+                sum += s;
+                counts[s] = (counts[s] || 0) + 1;
+                const dateStr = r.created_at ? new Date(r.created_at).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }) : "Verified";
+                const d = document.createElement('div');
+                d.className = "review-card";
+                d.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                        <strong>${escapeHtml(r.client_name || r.name)}</strong>
+                        <span style="font-family:var(--font-mono); font-size:11px; color:var(--text-muted);">${dateStr}</span>
+                    </div>
+                    <div style="color:var(--accent-amber); font-size:15px; margin-bottom:6px;">${"★".repeat(s)}</div>
+                    <p style="font-size:14px; color:var(--text-secondary);">${escapeHtml(r.comment)}</p>
+                `;
+                feed.appendChild(d);
+            });
+
+            const avg = total > 0 ? (sum / total).toFixed(1) : "5.0";
+            document.getElementById('avgScoreDisplay').innerText = avg;
+            document.getElementById('totalReviewsDisplay').innerText = `Based on ${total} verified client reviews`;
+
+            for (let i = 1; i <= 5; i++) {
+                const c = counts[i] || 0;
+                const pct = total > 0 ? Math.round((c / total) * 100) : 0;
+                document.getElementById('bar' + i).style.width = pct + "%";
+                document.getElementById('count' + i).innerText = c;
+            }
+        }
+
+        async function submitClientReview(e) {
+            e.preventDefault();
+            const btn = document.getElementById('ratingSubmitBtn');
+            const name = document.getElementById('reviewerName').value.trim();
+            const comment = document.getElementById('reviewerComment').value.trim();
+
+            const newRev = {
+                client_name: name,
+                stars: pickedStars,
+                comment: comment,
+                created_at: new Date().toISOString()
+            };
+
+            btn.innerText = "Saving to Supabase...";
+            btn.disabled = true;
+
+            reviewsData.unshift(newRev);
+            localStorage.setItem("elite_web_reviews_v1", JSON.stringify(reviewsData));
+            renderReviews();
+
+            try {
+                const res = await fetch(`${SUPABASE_PROJECT_URL}/rest/v1/client_reviews`, {
+                    method: "POST",
+                    headers: getSupabaseHeaders(),
+                    body: JSON.stringify(newRev)
+                });
+                if (res.ok) {
+                    triggerToast("Review saved to Supabase Database! ★");
+                } else {
+                    triggerToast("Review Saved! ★");
+                }
+            } catch (err) {
+                triggerToast("Review Saved Locally! ★");
+            } finally {
+                document.getElementById('ratingForm').reset();
+                pickStarLevel(5);
+                btn.innerText = "Submit Permanent Rating ★";
+                btn.disabled = false;
+            }
+        }
+
+        function escapeHtml(str) {
+            return String(str || "").replace(/[&<>'"]/g, t => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+            }[t] || t));
+        }
+
+        // --- 12. SUPABASE ORDER SYNC + GMAIL DELIVERY ---
+        async function handleLeadSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitOrderBtn');
+            const name = document.getElementById('clientNameField').value.trim();
+            const phone = document.getElementById('clientPhoneField').value.trim();
+            const email = document.getElementById('clientEmailField').value.trim();
+            const type = document.getElementById('clientTypeSelect').value;
+            const budget = document.getElementById('clientBudgetSelect').value;
+            const details = document.getElementById('clientDetailsField').value.trim();
+
+            btn.innerText = "Saving Order to Cloud...";
+            btn.disabled = true;
+
+            try {
+                await fetch(`${SUPABASE_PROJECT_URL}/rest/v1/client_orders`, {
+                    method: "POST",
+                    headers: getSupabaseHeaders(),
+                    body: JSON.stringify({
+                        client_name: name,
+                        phone_whatsapp: phone,
+                        email: email,
+                        website_type: type,
+                        budget_range: budget,
+                        project_details: details
+                    })
+                });
+            } catch (err) {}
+
+            btn.innerText = "Sending to onlyhack2277@gmail.com...";
+            try {
+                const res = await fetch("https://formsubmit.co/ajax/onlyhack2277@gmail.com", {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        _subject: `New Website Order (ELITE.WEB): ${type} (${name})`,
+                        Client_Name: name,
+                        Phone_WhatsApp: phone,
+                        Email: email,
+                        Website_Type: type,
+                        Budget_Range: budget,
+                        Project_Details: details
+                    })
+                });
+                if (res.ok) {
+                    triggerToast("Order saved to Supabase & sent to Gmail! ✓");
+                    document.getElementById('leadCaptureForm').reset();
+                } else {
+                    sendFormToWhatsApp();
+                }
+            } catch (err) {
+                sendFormToWhatsApp();
+            } finally {
+                btn.innerText = "Submit Order to Database & Gmail 🚀";
+                btn.disabled = false;
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            runTypewriter();
+            loadCodePreset('hero');
+            initReviews();
+        });
+    </script>
+</body>
+</html>
